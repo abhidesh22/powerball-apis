@@ -1,3 +1,17 @@
+### Information about the built node js application:
+
+1. There are 2 APIs implemented:
+  a. /checklottery -> it needs the date and ticket details of lotteries which needs to be checked
+  b. /pastwinners/:date -> this api will retrieve the past lottery results and winner details from the mongodb database.
+
+2. The tests are written for most of the validations and the controllers present in the application.
+
+3. The winning amount is calculated and sent back to the user on the /checklottery api
+
+4. The fetchDraws service implements the feature to retrieve the data from the url for the latest draws. It has a map which stores the data as long as the session is active and then avoids to refetch the data unless it is necessary and only when the date on the request is not already present in the retrieved draws data.
+
+5. The application can be extended to have authentication with jwt tokens and registration feature, also can be extended to create new tickets (using random generation)
+
 # Interview Exercise
 
 Your goal is to extend the functionality of this Node.js service.

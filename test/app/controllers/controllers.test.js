@@ -1,5 +1,5 @@
 const { root } = require('../../../app/controllers/root')
-const { notFound } = require('../../../app/controllers/notfound')
+const { notFound } = require('../../../app/middleware/error-handlers')
 
 test('Hello World Controller', () => {
   const res = { json: jest.fn() }
